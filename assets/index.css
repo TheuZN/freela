@@ -76,6 +76,12 @@ section {
     margin-bottom: 3rem;
 }
 
+/* INFO */
+
+.info-div {
+    display: none;
+}
+
 /* HEADER */
 
 header {
@@ -291,24 +297,12 @@ header {
     background-color: white;
     border-radius: 3rem;
     padding: 2rem 4rem;
-}
-
-.contato-info {
     display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    margin-bottom: 3rem;
+    gap: 3rem;
+    flex-direction: column;
 }
 
-.contato-info svg {
-    width: 5rem;
-}
-
-.contato-info span {
-    font-size: 2.2rem;
-}
-
-.contato-col-b a img {
+#contato img {
     border-radius: 2rem;
 }
 
@@ -389,29 +383,42 @@ footer {
     margin-top: 5rem;
 }
 
+footer h2, footer h3, footer a {
+    color: var(--primary-color);
+}
+
+footer h2 {
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 .footer-col-a img {
     width: 30rem;
-    margin-bottom: 3rem;
 }
 
 .footer-col-b h3 {
-    margin-block: 3rem;
+    margin-block: 1rem;
     text-align: left;
 }
 
 .footer-col-c h3 {
-    margin-block: 3rem;
+    margin-block: 1rem;
     text-align: left;
 }
 
 .redes-footer {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 
 .redes-footer svg {
     width: 5rem;
+    margin-bottom: 1rem;
 }
 
 .redes-footer button a {
@@ -505,7 +512,7 @@ footer {
         width: min(70rem, 100%);
     }
 
-    #hero-section .col-b, #sobre .sobre-col-b, #contato .contato-col-b {
+    #hero-section .col-b, #sobre .sobre-col-b, #contato .contato-col-b,  #contato .contato-col-a{
         display: flex;
         justify-content: center;
     }
@@ -516,6 +523,49 @@ footer {
         width: min(130rem, 100%);
         display: grid;
     }
+
+    /* INFO */
+
+.info-div {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-col-a {
+    display: flex;
+    gap: 1rem;
+}
+
+.info-redes {
+    display: flex;
+    gap: 1rem;
+}
+
+.info-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-rede a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: black;
+}
+
+.info-rede a:hover {
+    text-decoration: underline;
+}
+
+#info svg {
+    width: 2rem;
+    display: flex;
+    align-self: center;
+}
 
     /* HEADER */
 
@@ -534,7 +584,7 @@ footer {
     /* HERO-SECTION */
 
     #hero-section {
-        padding-top: 3rem;
+        padding-top: 6.5rem;
         padding-bottom: 4rem;
     }
 
@@ -630,17 +680,8 @@ footer {
         grid-template-areas: 
         "A B";
         gap: 5rem;
-    }
-
-    #contato .wrapper .contato-col-a {
-        grid-area: A;
-        text-align: left;
-        align-self: center;
-    }
-
-    #contato .wrapper .contato-col-b {
-        grid-area: B;
-        text-align: right;
+        flex-direction: initial;
+        justify-content: space-around;
     }
 
     /* SERVICOS */
@@ -674,31 +715,17 @@ footer {
     /* FOOTER */
 
     footer .wrapper {
+        display: flex;
         padding-block: 2rem;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "A B C D";
+        flex-direction: row;
+        justify-content: space-between;
         gap: 10rem;
     }
 
-    footer .wrapper .footer-col-a {
-        grid-area: A;
-        align-self: center;
-    }
-
-    footer .wrapper .footer-col-b {
-        grid-area: B;
-        text-align: center;
-    }
-
-    footer .wrapper .footer-col-c {
-        grid-area: C;
-        text-align: center;
-    }
-
-    footer .wrapper .footer-col-d {
-        grid-area: D;
-        align-self: center;
+    footer h2 {
+        color: var(--primary-color);
+        margin-top: 0;
+        margin-bottom: 1rem;
     }
 
     .redes-footer svg {
@@ -707,6 +734,7 @@ footer {
     
     .footer-col-a img {
         margin-bottom: 0;
+        width: 20rem;
     }
     
     .footer-col-b h3 {
@@ -717,7 +745,6 @@ footer {
     
     .footer-col-c h3 {
         margin-block: 0;
-        text-align: center;
         margin-bottom: 1rem;
     }
     

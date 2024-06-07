@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMobile = document.querySelector('.nav-mobile');
     const navLinks = navMobile.querySelectorAll('a');
 
-    // Função para fechar o menu mobile
     function closeMenu() {
         openBtn.style.display = 'block';
         closeBtn.style.display = 'none';
@@ -57,4 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
         link.addEventListener('click', closeMenu);
     });
+});
+
+window.addEventListener('scroll', function() {
+  var info = document.getElementById('info');
+  if (window.scrollY > 0) {
+      info.style.display = 'none';
+  } else {
+      info.style.display = 'block';
+  }
 });
