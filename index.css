@@ -189,6 +189,10 @@ header {
     text-align: center;
 }
 
+#hero-section .col-a h2 {
+    font-size: 1.9rem;
+}
+
 #hero-section .col-a button {
     width: 100%;
     background-color: var(--primary-color);
