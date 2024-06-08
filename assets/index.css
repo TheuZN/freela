@@ -26,7 +26,7 @@ body {
     text-align: left;
     overflow: overlay;
     background-color: #f6f6f6;
-    margin-top: 8rem; 
+    margin-top: 8rem;
 }
 
 img {
@@ -37,11 +37,16 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 li {
     list-style: none;
 }
 
-select, button {
+select,
+button {
     cursor: pointer;
 }
 
@@ -55,7 +60,7 @@ button:hover {
     opacity: 0.8;
 }
 
-.wrapper {    
+.wrapper {
     width: min(50rem, 100%);
     margin-inline: auto;
     padding-inline: 1.5rem;
@@ -98,17 +103,6 @@ header {
     left: 0;
 }
 
-.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-.hidden {
-    display: none;
-}
-
 .menu {
     display: flex;
     align-items: center;
@@ -139,10 +133,6 @@ header {
     font-weight: 800;
 }
 
-.menu-aside ul li a:hover {
-    text-decoration: underline;
-}
-
 .nav-mobile ul {
     display: flex;
     justify-content: center;
@@ -163,7 +153,7 @@ header {
     display: none;
 }
 
-.nav-mobile.active {
+.nav-mobile .active {
     display: block;
 }
 
@@ -313,7 +303,7 @@ header {
     flex-direction: column;
     gap: 3rem;
 }
- 
+
 .servicos-card {
     text-align: left;
     background-color: white;
@@ -326,10 +316,6 @@ header {
     color: var(--primary-color);
     font-weight: 900;
     font-size: 1.8rem;
-}
-
-.servicos-card a:hover {
-    text-decoration: underline;
 }
 
 .titulo-servicos {
@@ -355,7 +341,7 @@ header {
     flex-direction: column;
     gap: 3rem;
 }
- 
+
 .avaliacao-card {
     text-align: left;
     background-color: white;
@@ -383,7 +369,9 @@ footer {
     margin-top: 5rem;
 }
 
-footer h2, footer h3, footer a {
+footer h2,
+footer h3,
+footer a {
     color: var(--primary-color);
 }
 
@@ -391,10 +379,6 @@ footer h2 {
     text-align: left;
     margin-top: 2rem;
     margin-bottom: 1rem;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
 
 .footer-col-a img {
@@ -464,10 +448,10 @@ footer a:hover {
 }
 
 .projetos-img {
-    -ms-overflow-style: none; 
+    -ms-overflow-style: none;
     scrollbar-width: none;
 }
-  
+
 .gallery {
     display: flex;
     flex-flow: row nowrap;
@@ -497,70 +481,70 @@ footer a:hover {
 }
 
 @media screen and (max-width: 333px) {
-    body, html {    
+    body,
+    html {
         min-width: 33rem;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .wrapper {    
+    .wrapper {
         width: min(70rem, 100%);
     }
 
-    #hero-section .col-b, #sobre .sobre-col-b, #contato .contato-col-b,  #contato .contato-col-a{
+    #hero-section .col-b,
+    #sobre .sobre-col-b,
+    #contato .contato-col-b,
+    #contato .contato-col-a {
         display: flex;
         justify-content: center;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .wrapper {    
+    .wrapper {
         width: min(130rem, 100%);
         display: grid;
     }
 
     /* INFO */
 
-.info-div {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.7rem;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-}
+    .info-div {
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.7rem;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+    }
 
-.info-col-a {
-    display: flex;
-    gap: 1rem;
-}
+    .info-col-a {
+        display: flex;
+        gap: 1rem;
+    }
 
-.info-redes {
-    display: flex;
-    gap: 1rem;
-}
+    .info-redes {
+        display: flex;
+        gap: 1rem;
+    }
 
-.info-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
+    .info-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
 
-.info-rede a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: black;
-}
+    .info-rede a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: black;
+    }
 
-.info-rede a:hover {
-    text-decoration: underline;
-}
-
-#info svg {
-    width: 2rem;
-    display: flex;
-    align-self: center;
-}
+    #info svg {
+        width: 2rem;
+        display: flex;
+        align-self: center;
+    }
 
     /* HEADER */
 
@@ -585,16 +569,16 @@ footer a:hover {
 
     #hero-section .wrapper {
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "A B"
-        "C C";
+        grid-template-areas:
+            "A B"
+            "C C";
         gap: 3rem;
     }
 
     #hero-section .wrapper .col-a {
         grid-area: A;
         text-align: left;
-        align-self: center; 
+        align-self: center;
     }
 
     #hero-section .wrapper .col-b {
@@ -621,11 +605,11 @@ footer a:hover {
         gap: 0;
         margin-block: 0;
     }
-    
-    #hero-section .stats .stat + .stat {
+
+    #hero-section .stats .stat+.stat {
         border-left: 5px solid var(--primary-color);
     }
-    
+
     #hero-section .stats .stat {
         flex: 1;
         color: var(--primary-color);
@@ -635,9 +619,9 @@ footer a:hover {
 
     #sobre .wrapper {
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "A B"
-        "C C";
+        grid-template-areas:
+            "A B"
+            "C C";
         gap: 5rem;
     }
 
@@ -672,8 +656,8 @@ footer a:hover {
     #contato .wrapper {
         padding: 5rem 8rem;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "A B";
+        grid-template-areas:
+            "A B";
         gap: 5rem;
         flex-direction: initial;
         justify-content: space-around;
@@ -686,7 +670,7 @@ footer a:hover {
         flex-wrap: wrap;
         gap: 2rem;
     }
-    
+
     .servicos-card {
         width: 45%;
         flex-grow: 1;
@@ -700,7 +684,7 @@ footer a:hover {
         flex-wrap: wrap;
         gap: 5rem;
     }
-    
+
     .avaliacao-card {
         width: 30%;
         flex-grow: 1;
@@ -726,24 +710,24 @@ footer a:hover {
     .redes-footer svg {
         width: 4rem;
     }
-    
+
     .footer-col-a img {
         margin-bottom: 0;
         width: 20rem;
         height: 7rem;
     }
-    
+
     .footer-col-b h3 {
         margin-block: 0;
         text-align: center;
         margin-bottom: 1rem;
     }
-    
+
     .footer-col-c h3 {
         margin-block: 0;
         margin-bottom: 1rem;
     }
-    
+
     .redes-footer button a {
         font-size: 1.8rem;
         font-weight: 700;
@@ -752,12 +736,12 @@ footer a:hover {
     .redes-footer button a:hover {
         text-decoration: underline;
     }
-    
+
     .footer-col-d button {
         text-align: left;
         margin-block: 3rem;
     }
-    
+
     .footer-col-d button a svg {
         width: 10rem;
     }
