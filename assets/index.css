@@ -184,7 +184,7 @@ header {
     color: var(--primary-color);
 }
 
-#hero-section .col-a h3 {
+#hero-section .col-a h2 {
     font-size: 1.9rem;
 }
 
@@ -714,7 +714,7 @@ footer h2 {
     .footer-col-a img {
         margin-bottom: 0;
         width: 20rem;
-        height: 7rem;
+        height: auto;
     }
 
     .footer-col-b h3 {
