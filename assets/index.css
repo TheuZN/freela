@@ -184,10 +184,6 @@ header {
     color: var(--primary-color);
 }
 
-#hero-section .col-a h2 {
-    font-size: 1.9rem;
-}
-
 #hero-section .col-a h4 {
     font-size: 1.9rem;
     text-align: center;
